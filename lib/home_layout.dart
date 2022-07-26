@@ -69,8 +69,8 @@ class _HomeLayoutState extends State<HomeLayout> {
   List<Widget> tabs = [
     //body
     QuranScreen(),
+    AhadethScreen(),
     SebhaScreen(),
     RadioScreen(),
-    AhadethScreen(),
   ];
 }

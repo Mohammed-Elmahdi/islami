@@ -125,6 +125,12 @@ class QuranScreen extends StatelessWidget {
     return Column(
       children: [
         Center(child: Image.asset('assets/images/header_quran_bg.png')),
+        Divider(color: MyThemeData.primaryColor, thickness: 3),
+        Text(
+          'Sura Name',
+          style: Theme.of(context).textTheme.headline2,
+        ),
+        Divider(color: MyThemeData.primaryColor, thickness: 3),
         //moshaf image
         Expanded(
           child: ListView.separated(
