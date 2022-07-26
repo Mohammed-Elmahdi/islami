@@ -11,18 +11,21 @@ class MyThemeData {
       centerTitle: true,
       color: Colors.transparent,
       elevation: 0,
+      iconTheme: IconThemeData(
+        color: blackColor,
+      ), //back icon
     ),
     textTheme: TextTheme(
       headline1: TextStyle(
         fontSize: 30,
         color: blackColor,
         fontWeight: FontWeight.w700,
-      ),
+      ), //black w700
       headline2: TextStyle(
         fontSize: 25,
         color: blackColor,
         fontWeight: FontWeight.w400,
-      ),
+      ), //black w400
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: blackColor,
