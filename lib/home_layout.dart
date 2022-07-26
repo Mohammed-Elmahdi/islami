@@ -23,15 +23,15 @@ class _HomeLayoutState extends State<HomeLayout> {
           height: double.infinity,
           width: double.infinity,
           fit: BoxFit.fill,
-        ),
+        ), //main background
         Scaffold(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.transparent, //to make it the same background
           //to change background to main image
           appBar: AppBar(
             title: Text(
               'Islami',
               style: Theme.of(context).textTheme.headline1,
-            ),
+            ), //islami
           ),
           bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
@@ -59,14 +59,15 @@ class _HomeLayoutState extends State<HomeLayout> {
                     label: 'Radio'),
               ],
             ),
-          ),
-          body: tabs[currentIndex],
+          ), //bottom navigation bar
+          body: tabs[currentIndex], //change it by tabs index
         ),
       ],
     );
   }
 
   List<Widget> tabs = [
+    //body
     QuranScreen(),
     SebhaScreen(),
     RadioScreen(),

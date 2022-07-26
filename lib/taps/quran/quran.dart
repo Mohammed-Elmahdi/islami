@@ -3,7 +3,7 @@ import 'package:islami_project/my_theme.dart';
 import 'package:islami_project/taps/quran/quran-sura-item.dart';
 
 class QuranScreen extends StatelessWidget {
-  List<String> names = [
+  List<String> name = [
     "الفاتحه",
     "البقرة",
     "آل عمران",
@@ -125,9 +125,11 @@ class QuranScreen extends StatelessWidget {
     return Column(
       children: [
         Center(child: Image.asset('assets/images/header_quran_bg.png')),
+        //moshaf image
         Expanded(
           child: ListView.separated(
             separatorBuilder: (_, index) {
+              //line between sura names
               return Container(
                 height: 1,
                 color: MyThemeData.primaryColor,
@@ -135,9 +137,10 @@ class QuranScreen extends StatelessWidget {
               );
             },
             itemBuilder: (_, index) {
-              return QuranSuraItem('${names[index]}');
+              return QuranSuraItem(
+                  '${name[index]}', index); //creat class return name sura text
             },
-            itemCount: names.length,
+            itemCount: name.length,
           ),
         ),
       ],
