@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islami_project/taps/ahadeth.dart';
+import 'package:islami_project/taps/ahadeth/ahadeth.dart';
 import 'package:islami_project/taps/quran/quran.dart';
 import 'package:islami_project/taps/radio.dart';
 import 'package:islami_project/taps/sebha.dart';
