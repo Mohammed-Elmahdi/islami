@@ -25,16 +25,21 @@ class _AhadethScreenState extends State<AhadethScreen> {
           style: Theme.of(context).textTheme.headline2,
         ),
         Divider(color: MyThemeData.primaryColor, thickness: 3),
-        Expanded(
-          child: ListView.separated(
-              itemBuilder: (_, index) {
-                return AhadethItem(Allahadeth[index]);
-              },
-              separatorBuilder: (_, index) {
-                //line between sura names
-                return Container(
-                  height: 1,
-                  color: MyThemeData.primaryColor,
+        Allahadeth.length == 0
+            ? //if condition
+            Center(
+                child: CircularProgressIndicator(),
+              )
+            : Expanded(
+                child: ListView.separated(
+                    itemBuilder: (_, index) {
+                      return AhadethItem(Allahadeth[index]);
+                    },
+                    separatorBuilder: (_, index) {
+                      //line between sura names
+                      return Container(
+                        height: 1,
+                        color: MyThemeData.primaryColor,
                   margin: EdgeInsets.symmetric(horizontal: 50),
                 );
               },
