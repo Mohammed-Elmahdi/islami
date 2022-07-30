@@ -5,8 +5,10 @@ class SebhaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
+    return Column(
+      children: [
+        Image.asset('assets/images/masbahah.png'),
+      ],
     );
   }
 }
