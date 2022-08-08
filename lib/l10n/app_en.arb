@@ -4,5 +4,12 @@
     "quran": "Quran",
     "tsbeh": "Tsbeh",
     "radio": "Radio",
-    "settings": "Setting"
+    "settings": "Setting",
+     "noOfTasbeh":"No.Of Tasbeeh",
+     "suraName":"ٍSura Name",
+     "language":"Language",
+     "lang":"English",
+      "theme":"Theme",
+      "light":"Light",
+       "dark":"Dark"
 }

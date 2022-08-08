@@ -4,5 +4,12 @@
     "quran": "قران",
     "tsbeh": "تسبيح",
     "radio": "راديو",
-    "settings": "اعدادات"
+    "settings": "اعدادات",
+    "noOfTasbeh":"عدد التسبيحات",
+    "suraName":"إسم السورة",
+    "language":"اللغة",
+    "lang":"العربية",
+    "theme":"الوضع",
+    "light":"ساطع",
+    "dark":"ليلي"
 }

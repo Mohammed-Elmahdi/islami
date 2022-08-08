@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_project/sura_details/sura_details_item.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/my_provider.dart';
 
 class SuraDetailsScreen extends StatefulWidget {
   //return text (sora names) and navigate to sora details
@@ -16,6 +19,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     //argument in navigator to inter in sora details
+    var pro = Provider.of<MyProviderApp>(context);
     var SuraDetailsArgs = //argument in class QuranSuraItem (name,index)
         ModalRoute.of(context)!.settings.arguments as SuraDetailsModel;
     if (verses.isEmpty) {
@@ -24,7 +28,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
 
     return Stack(children: [
       Image.asset(
-        'assets/images/main_pg.png',
+        pro.getBackground(),
         height: double.infinity,
         width: double.infinity,
         fit: BoxFit.fill,
@@ -40,14 +44,14 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
         ),
         body: verses.length == 0
             ? //condition
-            Center(child: CircularProgressIndicator())
+        Center(child: CircularProgressIndicator())
             : ListView.builder(
-                //:else
-                itemBuilder: (_, index) {
-                  return SuraDetailsItem(verses[index].toString());
-                },
-                itemCount: verses.length,
-              ),
+          //:else
+          itemBuilder: (_, index) {
+            return SuraDetailsItem(verses[index].toString());
+          },
+          itemCount: verses.length,
+        ),
       ),
     ]);
   }

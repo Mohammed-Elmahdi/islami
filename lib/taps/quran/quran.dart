@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_project/my_theme.dart';
 import 'package:islami_project/taps/quran/quran-sura-item.dart';
 
@@ -127,7 +128,7 @@ class QuranScreen extends StatelessWidget {
         Center(child: Image.asset('assets/images/header_quran_bg.png')),
         Divider(color: MyThemeData.primaryColor, thickness: 3),
         Text(
-          'Sura Name',
+          AppLocalizations.of(context)!.suraName,
           style: Theme.of(context).textTheme.headline2,
         ),
         Divider(color: MyThemeData.primaryColor, thickness: 3),
